@@ -1,3 +1,8 @@
+### Demo :  https://rating-component-challenge1.netlify.app
+
+![interactive-rating-demo](https://user-images.githubusercontent.com/54044105/171839982-09335976-2100-47e0-bd91-254e0d69a109.png)
+
+
 # Frontend Mentor - Interactive rating component
 
 ![Design preview for the Interactive rating component coding challenge](./design/desktop-preview.jpg)
