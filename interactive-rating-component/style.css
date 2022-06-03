@@ -1,0 +1,234 @@
+/** Inıt Styles */
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --LightGrey: hsl(217, 12%, 63%);
+  --MediumGrey: hsl(216, 12%, 54%);
+  --DarkBlue: hsl(213, 19%, 18%);
+  --VeryDarkBlue: hsl(216, 12%, 8%);
+  /*? Font size (paragraph): 15px */
+  /*? Weights: 400, 700 */
+  /*? Mobile: 375px - Desktop: 1440px */
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Overpass", sans-serif;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+/** Main Container */
+
+.mainContainer {
+  background-color: var(--VeryDarkBlue);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/** Card Container */
+
+.cardContainer {
+  background: linear-gradient(#252933, #171e28);
+  width: 25%;
+  padding: 2.5rem 5rem;
+  border-radius: 1rem;
+}
+.starContainer {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--DarkBlue);
+  padding: 0.25rem 1.25rem;
+  padding-top: 1.05rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+.starContainer svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: inline-block;
+}
+.cardContainer p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--LightGrey);
+  margin-bottom: 2rem;
+}
+.cardContainer h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.ratingContainer {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.ratingList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ratingListItem,
+.ratingListItem.active {
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  background-color: var(--DarkBlue);
+  padding: 1rem 1.25rem;
+  padding-top: 1.25rem;
+  border-radius: 50%;
+  transition: background 0.5s ease-in-out;
+  cursor: pointer;
+}
+.ratingListItem.active {
+  background-color: var(--Orange);
+}
+.ratingListItem:hover {
+  background-color: var(--MediumGrey);
+}
+.listItemNumber {
+  width: 1rem;
+  height: 1rem;
+  font-size: 1.25rem;
+  pointer-events: none;
+}
+.submitBtn {
+  background-color: var(--Orange);
+  color: var(--White);
+  width: 100%;
+  margin: 1.5rem auto;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.submitBtn:hover {
+  background-color: var(--White);
+  color: var(--Orange);
+}
+
+/*? Submitted Container Styles */
+
+.submitSvgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.selectedValueInfoContainer {
+  background-color: var(--DarkBlue);
+  color: var(--Orange);
+  padding: 0.75rem;
+  width: 20rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+  border-radius: 2rem;
+}
+.submittedContainer h1,
+.submittedContainer p {
+  text-align: center;
+}
+
+/*! Media Queries */
+@media screen and (min-width: 1537px) {
+  .cardContainer {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .cardContainer {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .cardContainer {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .cardContainer {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .cardContainer {
+    width: 90%;
+  }
+}
+.phone-svg {
+  overflow: visible;
+}
+#credit-card,
+#ball {
+  transform: rotate(-180deg);
+  opacity: 0;
+  transform-origin: 50% 50%;
+  animation: revealCard 2s ease-in-out forwards 1s;
+}
+#ball {
+  transform: rotate(180deg);
+}
+#line {
+  opacity: 0;
+  animation: revealLine 2s ease-in-out forwards 2s;
+}
+#phone {
+  animation: revealPhone 1s ease-in-out forwards;
+}
+
+@keyframes revealCard {
+  0% {
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+@keyframes revealLine {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes revealBall {
+  0% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes revealPhone {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
