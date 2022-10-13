@@ -1,3 +1,8 @@
+### Demo : https://qr-code-challenge2.netlify.app
+
+![image](https://user-images.githubusercontent.com/54044105/171846728-05d25d55-c7ff-4b4f-8631-903520d8c156.png)
+
+
 # Frontend Mentor - QR code component
 
 ![Design preview for the QR code component coding challenge](./design/desktop-preview.jpg)
